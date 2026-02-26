@@ -1,2 +1,44 @@
 (Trader Performance vs Market Sentiment)
 Analyze how market sentiment (Fear/Greed) relates to trader behavior and performance on Hyperliquid. Your goal is to uncover patterns that could inform smarter trading strategies
+Datasets
+You will work with 2 datasets:
+1) Bitcoin Market Sentiment (Fear/Greed)
+Columns: Date, Classification (Fear / Greed)
+Link: https://drive.google.com/file/d/1PgQC0tO8XN-wqkNyghWc_-mnrYv_nhSf/view?usp=sharing
+
+2) Historical Trader Data (Hyperliquid)
+Includes fields like: account, symbol, execution price, size, side, time, start position, event, closedPnL, leverage, etc.
+Link: https://drive.google.com/file/d/1IAfLZwu6rJzyWKgBToqwSmmVYU6VbjVs/view?usp=sharing
+
+
+Please check for the download symbol in the left link 
+
+Tasks (What to do)
+Part A — Data preparation (must-have)
+Load both datasets and document:
+number of rows/columns
+missing values / duplicates
+Convert timestamps and align the datasets by date (daily level is fine).
+Create the key metrics you will analyze, for example:
+daily PnL per trader (or per account)
+win rate, average trade size
+leverage distribution
+number of trades per day
+long/short ratio
+Part B — Analysis (must-have)
+Answer these questions with evidence:
+Does performance (PnL, win rate, drawdown proxy) differ between Fear vs Greed days?
+Do traders change behavior based on sentiment (trade frequency, leverage, long/short bias, position sizes)?
+Identify 2–3 segments (examples):
+high leverage vs low leverage traders
+frequent vs infrequent traders
+consistent winners vs inconsistent traders
+Provide at least 3 insights backed by charts/tables.
+Part C — “Actionable output” (must-have)
+Propose 2 strategy ideas or “rules of thumb” based on your findings.
+Example: “During Fear days, reduce leverage for segment X; increase trade frequency only for segment Y.”
+Bonus (optional)
+Simple predictive model:
+Predict next-day trader profitability bucket or volatility of PnL using sentiment + behavior features
+Clustering traders into behavioral archetypes
+A lightweight dashboard (Streamlit) to explore results
